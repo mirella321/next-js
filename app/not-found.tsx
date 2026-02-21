@@ -1,6 +1,6 @@
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-500 via-cyan-500 to-emerald-500 text-white px-6 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-green-500 via-teal-500 to-emerald-500 text-white px-6 text-center">
       
       <h1 className="text-8xl md:text-9xl font-black drop-shadow-lg animate-pulse">
         404
@@ -21,7 +21,7 @@ export default function NotFound() {
 
       <a
         href="/"
-        className="mt-8 inline-block bg-white text-purple-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-100 transition-transform duration-200"
+        className="mt-8 inline-block bg-white text-green-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-100 transition-transform duration-200"
       >
         Zabierz mnie do domu 🏠
       </a>
