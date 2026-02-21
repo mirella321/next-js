@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "./Blog.css";
-import Card from "@/components/shared/Card/Card";
+import Card from "@/components/shared/card/Card";
 
 type News = {
   id: number;
