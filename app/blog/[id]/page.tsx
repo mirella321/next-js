@@ -1,12 +1,14 @@
-type BlogDetailsProps ={
-    params: Promise<{id: string}>;
-}
+type BlogDetailsProps = {
+  params: Promise<{ slug: string }>;
+};
 
-export default async function Blog({params}: any) {
-    const { id } = await params;
+export default async function BlogDetails({ params }: BlogDetailsProps) {
+  const { slug } = await params;
+
   return (
     <>
-      <h1>{id}</h1>
+      <h1>BLOG DETAILS</h1>
+      <h2>{slug}</h2>
     </>
   );
 }

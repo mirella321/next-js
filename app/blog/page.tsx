@@ -1,10 +1,31 @@
-import './Blog.css';
+"use client";
 
-export default async function Blog({params}: any) {
-    const { slug } = await params;
+import { useEffect, useState } from "react";
+import "./Blog.css";
+import Card from "@/components/shared/Card/Card";
+
+type News = {
+  id: number;
+  title: string;
+  body: string;
+};
+
+export default function Blog() {
+  const [news, setNews] = useState<News[]>([]);
+
+  useEffect(() => {
+    fetch("/api/news")
+      .then((response) => response.json())
+      .then(setNews);
+  }, []);
+
   return (
     <>
-      <h1>dobry dzien</h1>
+      <h1>BLOG</h1>
+
+      {news.map((n, index) => (
+        <Card key={index} title={n.title} body={n.body}></Card>
+      ))}
     </>
   );
 }
